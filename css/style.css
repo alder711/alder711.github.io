@@ -1,0 +1,124 @@
+:root {
+  --fsg: 180px;
+  --fsm: 50px;
+  --fwg: 700;
+  --bg: #1F2229;
+  --fg: #eaeaea;
+  --fgs: #292E39;
+  --blue: #5e81ac;
+  --green: #a3be8c;
+  --yellow: #ebcb8b;
+  --red: #bf616a;
+}
+
+@media only screen and (max-width: 1200px) {
+  :root {
+    --fsg: 150px;
+    --fsm: 30px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  :root {
+    --fsg: 130px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Proxima nova", monospace;
+  color: var(--fg);
+  font-size: 13.5px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: x-large;
+  font-weight: 600;
+  text-align: center;
+}
+.time {
+  margin-top: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: wave 5s ease-in-out infinite;
+}
+
+@media only screen and (max-width: 800px) {
+  .time {
+    margin-top: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: none;
+  }
+  #separator1 {
+    display: none;
+  }
+  #separator2 {
+    display: none;
+  }
+
+  #month {
+    margin-right: 0;
+  }
+}
+
+#month {
+  font-size: var(--fsg);
+  color: var(--blue);
+  font-weight: var(--fwg);
+  margin-right: 30px;
+}
+
+#day {
+  font-size: var(--fsg);
+  color: var(--green);
+  font-weight: var(--fwg);
+}
+
+#separator1 {
+  font-size: var(--fsg);
+  color: var(--fgs);
+  font-weight: var(--fwg);
+}
+
+#hour {
+  font-size: var(--fsg);
+  color: var(--yellow);
+  font-weight: var(--fwg);
+}
+
+#separator2 {
+  font-size: var(--fsg);
+  color: var(--fgs);
+  font-weight: var(--fwg);
+}
+
+#minutes {
+  font-size: var(--fsg);
+  color: var(--red);
+
+  font-weight: var(--fwg);
+}
+#greetings {
+  font-size: var(--fsm);
+  font-weight: var(--fwg);
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.footer {
+  margin-top: 5rem;
+  width: 65vw;
+}
