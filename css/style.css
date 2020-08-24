@@ -118,6 +118,18 @@ h1 {
   text-align: center;
   margin-bottom: 5rem;
 }
+#links{
+  font-size: var(--fsm);
+  font-weight: var(--fwg);
+  text-align: center;
+  margin-bottom: 5rem;
+}
+#link{
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--fg);
+  border-radius: 5px;
+}
 .footer {
   margin-top: 5rem;
   width: 65vw;
