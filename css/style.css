@@ -11,15 +11,31 @@
   --red: #bf616a;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1260px) {
   :root {
     --fsg: 150px;
     --fsm: 30px;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   :root {
-    --fsg: 130px;
+    --fsg: 150px;
+    --fsm: 30px;
+  }
+  .time {
+    display: flex;
+  }
+  #day {
+    margin-right: 100px;
+  }
+  #month {
+    margin-left: 100px;
+  }
+  .timechunk {
+    display: block;
+  }
+  #separator1 {
+    display: none;
   }
 }
 
@@ -48,31 +64,18 @@ h1 {
   text-align: center;
 }
 .time {
-  margin-top: 7rem;
   display: flex;
+  margin-top: 2rem;
   justify-content: center;
   align-items: center;
   animation: wave 5s ease-in-out infinite;
 }
-
-@media only screen and (max-width: 800px) {
-  .time {
-    margin-top: 1rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    animation: none;
-  }
-  #separator1 {
-    display: none;
-  }
-  #separator2 {
-    display: none;
-  }
-
-  #month {
-    margin-right: 0;
-  }
+.timechunk {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  animation: wave 5s ease-in-out infinite;
 }
 
 #month {
@@ -116,21 +119,109 @@ h1 {
   font-size: var(--fsm);
   font-weight: var(--fwg);
   text-align: center;
-  margin-bottom: 5rem;
 }
-#links{
-  font-size: var(--fsm);
-  font-weight: var(--fwg);
-  text-align: center;
-  margin-bottom: 5rem;
+.links-left {
+  float: left;
+  height: 100%;
+  display: table;
+  padding: 20px;
+}
+.links-right {
+  float: right;
+  height: 100%;
+  display: table;
+  padding: 20px;
 }
 #link{
   border-style: solid;
   border-width: 1px;
-  border-color: var(--fg);
+  border-color: var(--fgs);
   border-radius: 5px;
 }
+.link {
+  vertical-align: middle;
+  display: table-cell;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.link a {
+  padding: 5px;
+  border: 1px solid var(--fgs);
+  border-radius: 5px;
+  text-decoration: none;
+}
+.link1 a {
+  color: var(--blue);
+}
+.link2 a {
+  color: var(--green);
+}
+.link3 a {
+  color: var(--yellow);
+}
+.link4 a {
+  color: var(--red);
+}
+.decoration {
+  float: center;
+}
 .footer {
-  margin-top: 5rem;
-  width: 65vw;
+  margin-top: 1rem;
+  /*width: 65vw;*/
+  height: 10rem;
+  float: center;
+}
+
+@media only screen and (max-width: 660px) {
+  :root {
+    --fsg: 130px;
+    --fsm: 30px;
+  }
+  #greetings {
+    padding: 0;
+  }
+  .decoration {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .links-left {
+    margin-top: -60px;
+    margin-bottom: 100px;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  .footer {
+    margin-bottom: -60px;
+  }
+  .links-right {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}
+@media only screen and (max-width: 534px) {
+  :root {
+    --fsg: 100px;
+  }
+  .time {
+    margin-top: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: none;
+  }
+  #separator1 {
+    display: none;
+  }
+  #separator2 {
+    display: none;
+  }
+  #day {
+    margin-right: 0;
+  }
+  #month {
+    margin-right: 0;
+  }
 }
